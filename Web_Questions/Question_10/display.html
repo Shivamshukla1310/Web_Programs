@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Display</title>
+</head>
+<body>
+    <h2>User Information</h2>
+    <p id="userInfo"></p>
+
+    <script>
+        // Get user data from localStorage
+        const userInfo = JSON.parse(localStorage.getItem('userInfo'));
+
+        if (userInfo) {
+            document.getElementById('userInfo').innerHTML = `
+                <strong>Name:</strong> ${userInfo.name}<br>
+                <strong>Gender:</strong> ${userInfo.gender}<br>
+                <strong>Mobile:</strong> ${userInfo.mobile}<br>
+                <strong>Email:</strong> ${userInfo.email}<br>
+                <strong>City:</strong> ${userInfo.city}<br>
+                <strong>State:</strong> ${userInfo.state}<br>
+                <strong>Country:</strong> ${userInfo.country}
+            `;
+        } else {
+            document.getElementById('userInfo').innerHTML = "No user data available.";
+        }
+    </script>
+</body>
+</html>

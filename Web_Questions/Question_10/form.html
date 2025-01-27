@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+</head>
+<body>
+    <h2>User Information Form</h2>
+    <form id="userForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" required><br><br>
+
+        <label for="email">Mail ID:</label>
+        <input type="email" id="email" required><br><br>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" required><br><br>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" required><br><br>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" required><br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const userInfo = {
+                name: document.getElementById('name').value,
+                gender: document.getElementById('gender').value,
+                mobile: document.getElementById('mobile').value,
+                email: document.getElementById('email').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                country: document.getElementById('country').value
+            };
+
+            // Store data in localStorage to pass to another page
+            localStorage.setItem('userInfo', JSON.stringify(userInfo));
+
+            // Redirect to the display page
+            window.location.href = 'display.html';
+        }
+    </script>
+</body>
+</html>

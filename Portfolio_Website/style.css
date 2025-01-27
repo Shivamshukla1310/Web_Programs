@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Times, serif;
+}
+
+body {
+    background-color: rgb(16, 3, 65);
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 85px;
+    background-color: rgb(17, 8, 51);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+}
+
+nav ul li a {
+    text-decoration:none;
+    color: whitesmoke;
+}
+
+nav ul li a:hover {
+    color: rgb(114, 39, 235);
+    font-size: 1.1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main hr{
+    border: 0;
+    background: rgb(104, 17, 126);
+    height: 1.2px;
+    margin: 35px;
+}
+
+.left {
+    font-size: 1.7rem;
+}
+
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    margin: 115px 0;
+}
+
+.firstsection>div {
+    width: 30%;
+}
+
+.leftsection {
+    font-size: 3rem;
+}
+
+.rightsection img {
+    width: 80%;
+    margin: 50px 0;
+}
+
+.Name {
+    color: rgb(60, 32, 87);
+}
+
+/*.Secondsection{
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+
+.Secondsection h1{
+    font-size: 1.5rem;
+}
+
+ .gray{
+    color: gray;
+    font-size: small;
+}
+
+.Secondsection .box{
+    background: whitesmoke;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0;
+}
+
+#element{
+    color: rgb(60, 32, 87);
+    animation-delay: 5s;
+} */

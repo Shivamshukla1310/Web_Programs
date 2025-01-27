@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book Information</h1>
+    </header>
+
+    <section class="book-details">
+        <h2 id="book-title"></h2>
+        <p id="book-description"></p>
+        <p><strong>Author:</strong> <span id="book-author"></span></p>
+        <p><strong>Published Year:</strong> <span id="book-year"></span></p>
+    </section>
+
+    <script>
+        const books = {
+            "1": {
+                title: "Cybersecurity Essentials",
+                description: "A comprehensive introduction to the field of cybersecurity.",
+                author: "Charles J. Brooks",
+                year: "2018"
+            },
+            "2": {
+                title: "Hacking: The Art of Exploitation",
+                description: "An in-depth look at the techniques used by hackers to breach security.",
+                author: "Jon Erickson",
+                year: "2008"
+            },
+            "3": {
+                title: "The Web Application Hacker's Handbook",
+                description: "A detailed guide to identifying and exploiting vulnerabilities in web applications.",
+                author: "Dafydd Stuttard, Marcus Pinto",
+                year: "2011"
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const bookId = params.get('book');
+        
+        if (books[bookId]) {
+            document.getElementById('book-title').textContent = books[bookId].title;
+            document.getElementById('book-description').textContent = books[bookId].description;
+            document.getElementById('book-author').textContent = books[bookId].author;
+            document.getElementById('book-year').textContent = books[bookId].year;
+        } else {
+            document.querySelector('.book-details').innerHTML = '<p>Book not found.</p>';
+        }
+    </script>
+</body>
+</html>

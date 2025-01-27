@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/sl_031420_28950_10.jpg'); /* Add your background image URL here */
+    background-size: cover;
+    background-position: center;
+    color: #f6f6f7;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(rgba(243, 7, 7, 0.6), rgba(0, 0, 0, 0.6)); /* Gradient overlay */
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #00ffcc; /* Bright cyan for the heading */
+}
+
+h2 {
+    color: #ffcc00; /* Yellow for subheadings */
+}
+
+.bordered-text {
+    border: 2px solid #00ffcc; /* Cyan border */
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}

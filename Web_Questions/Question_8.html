@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Employee Information</h2>
+<table id="employeeTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Salary</th>
+    </tr>
+</table>
+
+<script>
+// Sample XML data (this could be loaded from an external XML file)
+let xmlData = `
+<employees>
+    <employee>
+        <id>1</id>
+        <name>John Doe</name>
+        <department>IT</department>
+        <salary>50000</salary>
+    </employee>
+    <employee>
+        <id>2</id>
+        <name>Jane Smith</name>
+        <department>HR</department>
+        <salary>45000</salary>
+    </employee>
+    <employee>
+        <id>3</id>
+        <name>Sam Wilson</name>
+        <department>Finance</department>
+        <salary>60000</salary>
+    </employee>
+</employees>
+`;
+
+function loadXMLData() {
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(xmlData, "text/xml");
+    const employees = xmlDoc.getElementsByTagName("employee");
+
+    let table = document.getElementById('employeeTable');
+
+    for (let i = 0; i < employees.length; i++) {
+        let row = table.insertRow();
+
+        let id = row.insertCell(0);
+        let name = row.insertCell(1);
+        let department = row.insertCell(2);
+        let salary = row.insertCell(3);
+
+        id.innerHTML = employees[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+        name.innerHTML = employees[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+        department.innerHTML = employees[i].getElementsByTagName("department")[0].childNodes[0].nodeValue;
+        salary.innerHTML = employees[i].getElementsByTagName("salary")[0].childNodes[0].nodeValue;
+    }
+}
+
+// Load the XML data when the page loads
+window.onload = loadXMLData;
+</script>
+
+</body>
+</html>

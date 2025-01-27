@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam - Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Shivam's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+<!-- <hr> -->
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hello, My Name Is <span class="Name">Shivam Shukla</span>
+                <div>And I Am A</div>
+                <!-- Element to contain animated typing -->
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="/—Pngtree—hacker wearing hoodie and using_5415642.png" alt="My Image">
+            </div>
+        </section>
+        <!-- <hr>
+        <section class="Secondsection">
+            <span class="gray">What I Have Done So Far</span>
+            <h1> Work Experience </h1>
+            <div class="box"></div>
+        </section> -->
+    </main>
+    <!-- This Line Of Code Is Just To Add Script Regarding Animation In My Website-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Load library from the CDN -->
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Vulnerabilities And Penetration Tester', 'Python Developer', 'Java Developer'],
+            typeSpeed: 80,
+        });
+    </script>
+</body>
+</body>
+
+</html>

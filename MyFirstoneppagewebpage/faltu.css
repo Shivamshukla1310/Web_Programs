@@ -1,0 +1,33 @@
+.HeaderLeft{
+    display: flex;
+    background-color: rgb(37, 133, 218);
+    gap: 50px;
+    margin: auto;
+}
+.logo{
+    height: 120px;
+    width: 200px;
+}
+.options{
+    display: flex;
+    gap: 50px;
+    position: relative;
+    left: 500px;
+    top: 30px;
+}
+.boyimg{
+    position: relative;
+    left: 1000px; 
+    height: 60%;
+    width: 23%;  
+}
+.information{
+    position: relative;
+    top: 100px;
+    font-size: xx-large;
+}
+.btn{
+    background-color: aqua;
+    position: relative;
+    left: 250px;
+}

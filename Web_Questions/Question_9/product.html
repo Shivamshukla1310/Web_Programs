@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Product Details</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Available Products</h2>
+        <table id="productTable">
+            <tr>
+                <th>Product ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </table>
+    </main>
+    <script>
+        const loadProducts = () => {
+            fetch('products.xml')
+                .then(response => response.text())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xmlDoc = parser.parseFromString(data, "text/xml");
+                    const products = xmlDoc.getElementsByTagName("product");
+                    let table = document.getElementById("productTable");
+
+                    for (let i = 0; i < products.length; i++) {
+                        let row = table.insertRow();
+                        let cell1 = row.insertCell(0);
+                        let cell2 = row.insertCell(1);
+                        let cell3 = row.insertCell(2);
+
+                        cell1.innerHTML = products[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+                        cell2.innerHTML = products[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                        cell3.innerHTML = products[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+                    }
+                });
+        };
+        window.onload = loadProducts;
+    </script>
+</body>
+</html>
