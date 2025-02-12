@@ -1,0 +1,22 @@
+<!-- Write javascript to add event listner to print hello world -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Add Event Listner</title>
+  </head>
+  <body>
+    <p>Example of the addEventListener() method.</p>
+    <p>Click the following button to see the effect.</p>
+    <button id="btn">Click ME</button>
+    <p id="para"></p>
+    <script>
+      document.getElementById("btn").addEventListener("click", fun);
+      function fun() {
+        document.getElementById("para").innerHTML =
+          "Hello World" + "<br>" + "Welcome to the program";
+      }
+    </script>
+  </body>
+</html>

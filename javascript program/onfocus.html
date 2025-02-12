@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <h1>Javascript Events</h1>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>On Focus Event Prg</title>
+  </head>
+  <body onload="window.alert('Page Successfully Loaded')">
+    <h2>Enter Something Here:</h2>
+    <input type="text" id="input1" onfocus="focusevent()" />
+    <script>
+      function focusevent() {
+        document.getElementById("input1").style.background = "pink";
+      }
+    </script>
+    <br />
+    <script>
+      document.write("The Page Is Loaded Successfully.");
+    </script>
+  </body>
+</html>
