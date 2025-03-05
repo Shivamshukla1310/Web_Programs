@@ -1,5 +1,6 @@
 let a = 10;
 let b = 15;
+// let b = 14; // This will give Error
 console.log(a + b);
 console.log(a - b);
 console.log(a * b);
