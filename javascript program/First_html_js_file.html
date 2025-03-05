@@ -7,9 +7,24 @@
   </head>
   <body>
     <label for="num1">Enter Number 1: </label>
-    <input type="text" required id="num1" /><br />
+    <input type="number" required id="num1" /><br />
     <label for="num2">Enter Number 2: </label>
-    <input type="text" required id="num2" /><br />
-    <input type="button" name="Calculate" id="Calculate" />
+    <input type="number" required id="num2" /><br />
+    <input
+      type="button"
+      name="Calculate"
+      value="Calculate"
+      onclick="myFunction()"
+      id="Calculate"
+    />
+
+    <script>
+      function myFunction() {
+        let num1 = document.getElementById("num1");
+        let num2 = document.getElementById("num2");
+        alert(num1 + num2);
+        alert(num1 - num2);
+      }
+    </script>
   </body>
 </html>
