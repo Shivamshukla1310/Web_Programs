@@ -10,12 +10,17 @@
 
 // Well the above approach prints the string in new line so to overcome that thing we can use another method
 
-function reverseString(str) {
-  let rev = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    rev += str[i];
-  }
-  console.log(rev);
-}
+// function reverseString(str) {
+//   let rev = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     rev += str[i];
+//   }
+//   console.log(rev);
+// }
 
+// reverseString("Hello");
+
+// One line code like this is good
+
+const reverseString = (str) => console.log(str.split("").reverse().join(""));
 reverseString("Hello");
