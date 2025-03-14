@@ -1,13 +1,14 @@
 // This program is to understand palindrome question
 palindrome_func = (str) => {
-  const rev_str = (str) => console.log(str.split("").reverse().join(""));
+  let rev_str = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    rev_str += str[i];
+  }
   if (str == rev_str) {
     console.log("Its Palindrome");
   } else {
-    console.log(str);
-    console.log(rev_str);
     console.log("Its not palindrome");
   }
 };
 
-palindrome_func("saas");
+palindrome_func("saaso");
