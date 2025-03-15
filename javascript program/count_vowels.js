@@ -1,6 +1,6 @@
 // This program is to count the number of vowels in a string
 
-let find_vowel = (str) => {
+const find_vowel = (str) => {
   let vowel_count = 0;
   for (let i = 0; i <= str.length - 1; i++) {
     if (
