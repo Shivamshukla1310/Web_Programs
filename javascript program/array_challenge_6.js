@@ -5,4 +5,5 @@
 
 let popularTeas = ["green tea", "oolong tea", "chai"];
 let copyOfOgTea = popularTeas
+popularTeas.pop();
 console.log(`${popularTeas} \n ${copyOfOgTea}`);
