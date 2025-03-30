@@ -1,32 +1,58 @@
-body{
-    background: antiquewhite
-}
-
-.head{
-    padding: 20px 50px;
-    margin: auto;
+body {
+    background: antiquewhite;
     text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.head {
+    padding: 20px;
     background-color: lavender;
-    color: brown
+    color: brown;
 }
 
-.image{
-    padding: 150px;
+.game-container {
+    margin-top: 30px;
 }
 
-button{
-    padding: 20px 30px;
+.display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.display img {
+    width: 150px;
+    height: 150px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 25px;
     background-color: lavender;
-    color: brown
+    color: brown;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.buttons{
-    margin: auto;
-    padding-left: 500px
+button:hover {
+    background-color: lightcoral;
 }
 
-.game{
-    margin: auto;
-    padding-left: 550px;
-    padding-top: 50px;
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.play_again {
+    display: none;
+    margin-top: 20px;
 }
