@@ -1,7 +1,32 @@
+body{
+    background: antiquewhite
+}
+
 .head{
     padding: 20px 50px;
     margin: auto;
     text-align: center;
     background-color: lavender;
     color: brown
+}
+
+.image{
+    padding: 150px;
+}
+
+button{
+    padding: 20px 30px;
+    background-color: lavender;
+    color: brown
+}
+
+.buttons{
+    margin: auto;
+    padding-left: 500px
+}
+
+.game{
+    margin: auto;
+    padding-left: 550px;
+    padding-top: 50px;
 }
