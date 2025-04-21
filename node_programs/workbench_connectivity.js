@@ -12,7 +12,7 @@ var con = mysql.createConnection({
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
-    con.query("CREATE DATABASE studentdb", function (err, result) {
+    con.query("CREATE DATABASE studentdb2", function (err, result) {
         if (err) throw err;
         console.log("Database created");
     });

@@ -1,5 +1,5 @@
-//create_table.js
-var mysql = require('mysql2');
+//delete_student.js
+var mysql = require('mysql2');//
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -10,10 +10,10 @@ var con = mysql.createConnection({
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "CREATE TABLE student(rollno int PRIMARY KEY,name VARCHAR(255) UNIQUE, percentage double)";
+    var sql = "DELETE FROM STUDENT WHERE rollno = 124;";
     con.query(sql, function (err, result) {
         if (err) throw err;
-        console.log("Table created");
+        console.log("Record deleted");
+        console.log(result);
     });
 });
-
