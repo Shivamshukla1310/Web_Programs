@@ -10,7 +10,7 @@ var con = mysql.createConnection({
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
-    var sql = "UPDATE STUDENT SET name = 'Kiyu' WHERE rollno = 121;";
+    var sql = "UPDATE STUDENT SET percentage = 35.00 WHERE rollno = 124;";
     con.query(sql, function (err, result) {
         if (err) throw err;
         console.log("Record updated");
